@@ -4,7 +4,7 @@ from std_msgs.msg import Float32MultiArray
 
 
 def callback(msg):
-    print  len(msg.ranges)
+    rospy.loginfo(len(msg.ranges))
 
 
 rospy.init_node('scan_values')
