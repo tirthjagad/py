@@ -5,7 +5,7 @@ from sensor_msgs.msg import LaserScan
 
 rospy.init_node('laser_scan_publisher')
 
-scan_pub = rospy.Publisher('message_data', LaserScan, queue_size=50)
+scan_pub = rospy.Publisher('sim_ros_interface/front_scan', LaserScan, queue_size=50)
 
 num_readings = 100
 laser_frequency = 40
@@ -32,6 +32,6 @@ while not rospy.is_shutdown():
         message_data.ranges.append(1.0 * count)  # fake data
         message_data.intensities.append(1)  # fake data
 
-    scan_pub.publish(sim_ros_interface/front_scan)
+    scan_pub.publish(message_data)
     count += 1
     r.sleep()
