@@ -11,7 +11,7 @@ def callback(msg):
   Float32 = 1.0
   if msg.ranges[360] < 2 :
     Flaot32 = 0
-  pub.publish(move)
+  pub.publish(Float32)
 
 
 sub = rospy.Subscriber('sim_ros_interface/front_scan', LaserScan , callback)
