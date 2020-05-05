@@ -10,7 +10,7 @@ def callback(msg):
   print msg.ranges[360]
   Float32 = -1.0
   if msg.ranges[360] < 2 :
-    Flaot32 = 0
+    Flaot32 = [1.0 1.0 -1.0 -1.0]
   pub.publish(Float32)
   pub1.publish(Float32)
   pub2.publish(Float32)
