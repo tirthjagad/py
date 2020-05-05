@@ -12,7 +12,7 @@ def callback(msg):
   move1 = -1.0
   move2 = -1.0
   move3 = -1.0
-  if msg.ranges[360] < 1 :
+  if msg.ranges[360] < 2 :
     move = 1.0
     move1 = 1.0
     move2 = -1.0
