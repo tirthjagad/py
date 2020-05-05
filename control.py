@@ -15,8 +15,8 @@ def callback(msg):
 
 rospy.init_node('Check Obstacle')
 sub = rospy.Subscriber('sim_ros_interface/front_scan', Laserscan , callback)
-pub = rospy.Publisher('/Motor1Speed_youbot' , std_msgs)
-move = std_msgs()
+pub = rospy.Publisher('/Motor1Speed_youbot' , Float32)
+move = Float32()
 rospy.spin()
 
 
