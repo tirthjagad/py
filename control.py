@@ -4,7 +4,7 @@ import rospy
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Float32
 rospy.init_node('laser_scan_node')
-def callback(msg)
+def callback(msg):
   print msg.ranges[360]
   move.Float32 = 1.0
   if msg.ranges[360] < 2 :
