@@ -18,10 +18,10 @@ def callback(msg):
 
 
 sub = rospy.Subscriber('sim_ros_interface/front_scan', LaserScan , callback)
-pub = rospy.Publisher('/Motor1Speed_youbot' , Float32)
-pub1 = rospy.Publisher('/Motor2Speed_youbot' , Float32)
-pub2 = rospy.Publisher('/Motor3Speed_youbot' , Float32)
-pub3 = rospy.Publisher('/Motor4Speed_youbot' , Float32)
+pub = rospy.Publisher('/Motor1Speed_youbot' , Float32 , queue_size=50)
+pub1 = rospy.Publisher('/Motor2Speed_youbot' , Float32 , queue_size=50)
+pub2 = rospy.Publisher('/Motor3Speed_youbot' , Float32 , queue_size=50)
+pub3 = rospy.Publisher('/Motor4Speed_youbot' , Float32 , queue_size=50)
 rospy.spin()
 
 
